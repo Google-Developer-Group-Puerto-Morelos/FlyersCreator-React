@@ -1,0 +1,142 @@
+
+#flyer {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 990px !important;
+    height: 557px !important;
+}
+
+#title {
+    color: var(--color-title);
+    background-color: var(--backgroundColor-title);
+    font-weight: bold;
+}
+
+#speaker {
+    margin-top: 0;
+    color: var(--color-speaker);
+    background-color: var(--backgroundColor-speaker);
+    text-transform: capitalize;
+}
+
+#dateformat {
+    color: var(--color-date);
+    background-color: var(--backgroundColor-date);
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.main-content {
+    margin-top: 5rem;
+}
+
+.flyer-content {
+    padding: 10rem 0;
+}
+
+.mui-select__menu>div {
+    color: var(--color-title);
+}
+
+#flyerTheme {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.theme-owasp {
+    --color-title: #fff;
+    --backgroundColor-title: #A3F144;
+    --color-speaker: #123441;
+    --backgroundColor-speaker: transparent;
+    --color-date: #000;
+    --backgroundColor-date: transparent;
+}
+
+.theme-owasp {
+    --color-title: #fff;
+    --backgroundColor-title: #A3F144;
+    --color-speaker: #123441;
+    --backgroundColor-speaker: #fff;
+    --color-date: #fff;
+    --backgroundColor-date: transparent;
+}
+
+.theme-owasp .data-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: max-content;
+}
+
+.theme-owasp .flyer-content {
+    padding-top: 5rem;
+}
+
+.theme-owasp span#dayevent, .theme-owasp span#monthevent {
+    font-size: 3.8rem;
+    font-weight: bold;
+    justify-self: center;
+    align-self: center;
+}
+
+.theme-owasp span#dayevent {
+    color: var(--backgroundColor-title);
+    align-self: end;
+}
+
+.theme-owasp span#monthevent {
+    color: var( --backgroundColor-speaker);
+    margin-top: -2rem;
+    font-size: 2.5rem;
+}
+
+.theme-owasp #title {
+    grid-column: 2 / -1;
+    grid-row: 1;
+    padding: .2rem .35rem;
+    height: max-content;
+    margin-bottom: .2rem;
+}
+
+.theme-owasp #speaker {
+    grid-column: 2 / -1;
+    grid-row: 2;
+    height: max-content;
+    padding: .35rem;
+}
+
+.theme-owasp #hourformat {
+    grid-column: 2 / -1;
+    grid-row: 3;
+    height: max-content;
+    color: var(--backgroundColor-speaker);
+}
+
+.theme-gdg .data-grid {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+}
+
+.theme-gdg #title, .theme-gdg #speaker {
+    grid-column: 1 / -1;
+}
+
+.theme-gdg #hourformat {
+    grid-column: 3 / -1;
+}
+
+.theme-gdg #dayevent, .theme-gdg #monthevent {
+    grid-row: 3;
+    font-size: 24px;
+}
+
+.theme-gdg #monthevent {
+    padding-right: .25rem;
+}

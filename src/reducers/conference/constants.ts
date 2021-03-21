@@ -1,0 +1,1 @@
+export const UPDATE_CONFERENCE_DATA = 'app/conference'
