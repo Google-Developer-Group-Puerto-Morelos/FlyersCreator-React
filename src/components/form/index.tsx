@@ -4,7 +4,6 @@ import FormComponent from './FormComponent'
 import { IFormComponentProps } from './interfaces'
 
 import {
-    log,
     updateSpeakerName,
     updateDate,
     updateName,

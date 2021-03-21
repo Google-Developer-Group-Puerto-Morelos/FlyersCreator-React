@@ -49,11 +49,10 @@ export const updateTheme = (payload: any) =>{
 
 
 export const saveFlyer = (event: any) =>{
-    html2canvas(document.getElementById("flyer") , {
+    html2canvas(document.getElementById("flyer") || document.createElement('div') , {
         useCORS: true,
         allowTaint: true,
-        scale: 1,
-        dpi: 500,
+        scale: 1
     }).then(function (canvas: any) {
         var link = document.createElement("a");
         document.body.appendChild(link);
