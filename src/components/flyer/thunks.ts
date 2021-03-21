@@ -1,12 +1,12 @@
-import { useSelector } from "react-redux"
+import { IConference, Themes } from "../../models/IState";
 import GDGBackground from './images/gdg-background.png';
 import OWASPBackground from './images/owasp-background.png';
 
-export const getBackground =  (conference: any) => {
+export const getBackground =  (conference: IConference) => {
     switch(conference.theme) {
-        case 'gdg': 
+        case Themes.GDG: 
             return GDGBackground;
-        case 'owasp':
+        case Themes.OWASP:
             return OWASPBackground;
     }    
 }

@@ -1,12 +1,19 @@
+import initialState from '../../initialState';
+import { IDefaultState } from '../../models/IState';
 import * as CONFERENCE_CONSTANTS from './constants';
 
-export function updateConferenceData(draft: any = false, action: any) {
+interface IAction {
+    type: String,
+    payload: object
+}
+
+export function updateConferenceData(state: IDefaultState = initialState, action: IAction) {
 
     switch (action.type) {
         case CONFERENCE_CONSTANTS.UPDATE_CONFERENCE_DATA:
             const { payload }  = action;
-            return  {...draft, ...payload  };
+            return  {...state, ...payload  };
         default:
-            return draft;
+            return state;
     }
 }

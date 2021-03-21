@@ -1,5 +1,6 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { IDefaultState } from '../../models/IState';
 import FlyerComponent from './FlyerComponent'
 import {
   getBackground
@@ -7,7 +8,7 @@ import {
 
 
 const HallOfOrganizationWithHOC = () => {
-  const conference = useSelector((state: any) => state.conference)
+  const conference = useSelector((state: IDefaultState) => state.conference)
   
 
   const formProp = {

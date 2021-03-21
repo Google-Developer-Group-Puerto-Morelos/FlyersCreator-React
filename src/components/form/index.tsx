@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import FormComponent from './FormComponent'
+import { IFormComponentProps } from './interfaces'
 
 import {
     log,
@@ -16,15 +17,14 @@ const FormWithHOC = () => {
   const conference = useSelector((state: any) => state.conference)
   const dispatch = useDispatch()
 
-  const formProp = {
+  const formProp : IFormComponentProps = {
     conference,
-    log: () => dispatch(log()),
-    updateName: (event: any) => dispatch(updateName(event)),
-    updateSpeakerName: (event: any) => dispatch(updateSpeakerName(event)),
-    updateCity: (event: any) => dispatch(updateCity(event)),
-    updateDate: (event: any) => dispatch(updateDate(event)),
-    updateTheme: (event: any) => dispatch(updateTheme(event)),
-    saveFlyer: (event: any) => saveFlyer
+    updateName: (event: InputEvent) => dispatch(updateName(event)),
+    updateSpeakerName: (event: InputEvent) => dispatch(updateSpeakerName(event)),
+    updateCity: (event: InputEvent) => dispatch(updateCity(event)),
+    updateDate: (event: InputEvent) => dispatch(updateDate(event)),
+    updateTheme: (event: InputEvent) => dispatch(updateTheme(event)),
+    saveFlyer: () => saveFlyer
   }
 
   return <FormComponent {...formProp} />

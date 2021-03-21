@@ -1,13 +1,8 @@
 import * as CONFERENCE_CONSTANTS from '../../reducers/conference/constants';
 import html2canvas from 'html2canvas';
 
-export const log =()=>{
-    return ()=>{
-        console.log("message")
-    }
-}
 
-export const updateName = (event: any) =>{
+export const updateName = (event: any ) =>{
     return (dispatch: any) => {
         dispatch({
             type: CONFERENCE_CONSTANTS.UPDATE_CONFERENCE_DATA,
@@ -54,7 +49,6 @@ export const updateTheme = (payload: any) =>{
 
 
 export const saveFlyer = (event: any) =>{
-    console.log('save the flyer')
     html2canvas(document.getElementById("flyer") , {
         useCORS: true,
         allowTaint: true,
