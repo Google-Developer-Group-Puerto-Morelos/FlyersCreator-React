@@ -3,7 +3,8 @@ const initialState = {
         date: new Date(),
         name: 'Conference name',
         speaker: 'SpeakerName',
-        address: 'West View'
+        city: 'West View',
+        theme: 'gdg'
     }
 }
 export default initialState;

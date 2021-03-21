@@ -7,7 +7,9 @@ import {
     updateSpeakerName,
     updateDate,
     updateName,
-    updateAddress
+    updateCity,
+    updateTheme,
+    saveFlyer
 } from './thunks'
 
 const FormWithHOC = () => {
@@ -19,8 +21,10 @@ const FormWithHOC = () => {
     log: () => dispatch(log()),
     updateName: (event: any) => dispatch(updateName(event)),
     updateSpeakerName: (event: any) => dispatch(updateSpeakerName(event)),
-    updateAddress: (event: any) => dispatch(updateAddress(event)),
+    updateCity: (event: any) => dispatch(updateCity(event)),
     updateDate: (event: any) => dispatch(updateDate(event)),
+    updateTheme: (event: any) => dispatch(updateTheme(event)),
+    saveFlyer: (event: any) => saveFlyer
   }
 
   return <FormComponent {...formProp} />
